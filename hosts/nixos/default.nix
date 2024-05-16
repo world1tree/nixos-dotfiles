@@ -2,9 +2,6 @@
 
 let user = "zaiheshi"; in
 {
-  imports = [
-    ../../modules/nixos/disk-config.nix
-  ];
 
   # Use the systemd-boot EFI boot loader.
   boot = {

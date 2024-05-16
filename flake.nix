@@ -6,12 +6,8 @@
       url = "github:nix-community/home-manager/release-23.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    disko = {
-      url = "github:nix-community/disko";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
-  outputs = { self, nixpkgs, home-manager, disko } @inputs:
+  outputs = { self, nixpkgs, home-manager } @inputs:
     let
       user = "zaiheshi";
       linuxSystems = [ "x86_64-linux" "aarch64-linux" ];
@@ -37,7 +33,6 @@
         specialArgs = inputs;
         modules = [
           ./hardware-configuration.nix
-          disko.nixosModules.disko
           home-manager.nixosModules.home-manager {
             home-manager = {
               useGlobalPkgs = true;
