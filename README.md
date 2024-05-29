@@ -18,6 +18,8 @@
 
 ``sudo cp /mnt/etc/nixos/hardware-configuration.nix .``
 
+``git add hardware-configuration.nix``
+
 4. 安装系统
 ``sudo nixos-install --flake .#x86_64-linux``
 
