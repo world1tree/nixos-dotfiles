@@ -7,14 +7,6 @@ with pkgs; [
   tree
   unrar
   unzip
-  tree
-  xclip
-  acpi
-  jq
   lf
-  feh
-
-  dmenu
-  scrot
   brave
 ]

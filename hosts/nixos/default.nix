@@ -65,8 +65,7 @@ let user = "zaiheshi"; in
   services = {
     xserver = {
       enable = true;
-      # desktopManager.plasma5.enable = true;
-      windowManager.bspwm.enable = true;
+      desktopManager.plasma5.enable = true;
       displayManager.sddm.enable = true;
 
       layout = "us";
@@ -146,17 +145,7 @@ let user = "zaiheshi"; in
 
   environment.systemPackages = with pkgs; [
     git
-    libnotify
   ];
-
-  i18n.inputMethod = {
-    enabled = "fcitx5";
-    fcitx5.addons = with pkgs; [
-      fcitx5-rime
-      fcitx5-chinese-addons
-      fcitx5-configtool
-    ];
-  };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.settings.substituters = lib.mkForce ["https://mirrors.ustc.edu.cn/nix-channels/store" ];
